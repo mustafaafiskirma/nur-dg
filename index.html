@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İyi ki Doğdun Nur! ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Start Overlay -->
+    <div id="startOverlay" class="start-overlay">
+        <div class="particles" id="particles"></div>
+        <div class="start-content">
+            <h1>✨ Seni Bekleyen Bir Sürpriz Var ✨</h1>
+            <button class="start-btn">Sürprizi Aç</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-content">
+            <h1 class="fade-in-up">İyi ki Doğdun Nur! 🎂</h1>
+            <h2 class="fade-in-up delay-1">Selman'dan Sana Özel</h2>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container fade-in-up delay-2">
+                <h3>🎂 Doğum Gününe Kalan Süre 🎂</h3>
+                <div id="countdown" class="countdown">
+                    <div class="time-box">
+                        <span id="cd-days" class="time-val">00</span>
+                        <span class="time-label">gün</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-hours" class="time-val">00</span>
+                        <span class="time-label">saat</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-mins" class="time-val">00</span>
+                        <span class="time-label">dk</span>
+                    </div>
+                    <div class="time-box">
+                        <span id="cd-secs" class="time-val">00</span>
+                        <span class="time-label">sn</span>
+                    </div>
+                </div>
+                <div id="birthdayMessage" class="birthday-message" style="display: none;">
+                    🎉 MUTLU YILLAR NUR! 🎉
+                </div>
+            </div>
+
+            <div class="scroll-indicator fade-in-up delay-3">
+                <span>↓ Aşağı Kaydır ↓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Letter Section -->
+    <section class="letter-section">
+        <div class="letter-card fade-on-scroll">
+            <div class="letter-content" id="letterContent">
+                <p class="typewriter-line" data-text="Nur’um,"></p>
+                <p class="typewriter-line" data-text="Seninle geçen her gün, hayatımın en güzel yerine yazılmış bir hatıra gibi. Gülüşünle güzelleşen sabahlar, yanında huzur bulduğum sessizlikler… Sen fark etmeden bile hayatıma iyi gelen o kadar çok şey var ki."></p>
+                <p class="typewriter-line" data-text="23 yıl önce bugün, bu dünyaya bir ışık doğdu. Ama benim için asıl mucize, o ışığın bir gün gelip hayatıma dokunmasıydı."></p>
+                <p class="typewriter-line" data-text="Hayallerinin peşinden cesurca koşan, sevdiklerini kalbinin en güzel yerinde taşıyan, sadece gülümsemesiyle bile insanın içini ısıtan o kadın… Seni tanımak da, sevmek de hayatımın en güzel şansı oldu."></p>
+                <p class="typewriter-line" data-text="Ben artık birçok şeyi seninle düşünüyor, seninle hayal ediyorum. Çünkü sen sadece sevdiğim kadın değil, kalbimin en güzel alışkanlığı oldun Nur’um."></p>
+                <p class="typewriter-line" data-text="Seninle geçen her anı, birlikte kurduğumuz her hayali, geleceğe dair kurduğumuz her cümleyi çok seviyorum. İyi ki varsın. İyi ki benim hayatımdasın."></p>
+                <p class="typewriter-line" data-text="Yeni yaşın sana mutluluk, huzur ve kalbinden geçen tüm güzellikleri getirsin. Ve umarım ben, her yeni yaşında yanında olmaya devam ederim."></p>
+                <p class="signature typewriter-line" data-text="Doğum günün kutlu olsun sevgilim. ❤️"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Film Strip) -->
+    <section class="gallery-section">
+        <h2 class="section-title fade-on-scroll">📸 Birlikte Geçen Anlarımız 📸</h2>
+        <div class="gallery-container">
+            <!-- Row 1: Left scrolling -->
+            <div class="gallery-row row-left">
+                <div class="gallery-track track-left">
+                    <!-- Photos will be injected by JS to create infinite loop -->
+                </div>
+            </div>
+            <!-- Row 2: Right scrolling -->
+            <div class="gallery-row row-right">
+                <div class="gallery-track track-right">
+                    <!-- Photos will be injected by JS -->
+                </div>
+            </div>
+            <!-- Row 3: Left scrolling -->
+            <div class="gallery-row row-left-fast">
+                <div class="gallery-track track-left-fast">
+                    <!-- Photos will be injected by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wish Wall Section -->
+    <section class="wish-section">
+        <h2 class="section-title fade-on-scroll">💫 Dileklerim 💫</h2>
+        <div class="wish-grid">
+            <div class="wish-card fade-on-scroll delay-stagger-1">
+                <div class="wish-emoji">🌟</div>
+                <p>"Her yeni yaşın, sana daha çok güzellik ve mutluluk getirsin."</p>
+            </div>
+            <div class="wish-card fade-on-scroll delay-stagger-2">
+                <div class="wish-emoji">💖</div>
+                <p>"Gözlerindeki o ışık hiç sönmesin. Çünkü benim yolumu aydınlatan o ışık."</p>
+            </div>
+            <div class="wish-card fade-on-scroll delay-stagger-3">
+                <div class="wish-emoji">🦋</div>
+                <p>"Hayallerinin peşinden koşarken yanında olmak, benim en büyük hayalim."</p>
+            </div>
+            <div class="wish-card fade-on-scroll delay-stagger-4">
+                <div class="wish-emoji">🌙</div>
+                <p>"Seninle her gün bayram, her an özel. Ama bugün biraz daha özel."</p>
+            </div>
+            <div class="wish-card fade-on-scroll delay-stagger-5">
+                <div class="wish-emoji">✨</div>
+                <p>"Nice yaşlara... ve nice birlikte uyandığımız sabahlara."</p>
+            </div>
+            <div class="wish-card fade-on-scroll delay-stagger-6">
+                <div class="wish-emoji">🌹</div>
+                <p>"Seni sevmek, hayatımda aldığım en güzel karar."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="closing-section">
+        <div class="closing-container fade-on-scroll">
+            <h2>Bu sürprizi beğendin mi?</h2>
+            <div class="interaction-area">
+                <button id="yesBtn" class="btn btn-yes">EVET ❤️</button>
+                <button id="noBtn" class="btn btn-no">HAYIR</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img class="lightbox-img" id="lightboxImg" src="">
+    </div>
+
+    <!-- Celebration Overlay -->
+    <div id="celebrationOverlay" class="celebration-overlay">
+        <div class="celebration-content">
+            <h1 class="bounce-in">Seni Çok Seviyorum Nur! 🎉</h1>
+            <p class="fade-in delay-1">İyi ki doğdun, iyi ki varsın! ❤️</p>
+            <button class="btn btn-yes mt-4" onclick="location.reload()">Tekrar İzle 🔄</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
